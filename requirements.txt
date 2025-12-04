@@ -1,0 +1,28 @@
+# Additional packages on top of dagster-celery-k8s base image
+# Base image already includes: dagster, dagster-celery, dagster-k8s, dagster-postgres, etc.
+
+# SQL Server connectivity
+pyodbc>=5.0.0
+pymssql>=2.2.0
+
+# dlt (data load tool) with SQL Server destination
+dlt[sqlserver]>=1.3.0
+dagster-dlt>=0.25.0
+
+# dbt support
+dagster-dbt>=0.25.0
+dbt-postgres>=1.8.0
+
+# Git operations (for git sync)
+GitPython>=3.1.0
+
+# Common data processing libraries
+pandas>=2.0.0
+polars>=1.0.0
+
+# Fake data generation
+faker>=28.0.0
+
+# HTTP and API utilities
+requests>=2.31.0
+httpx>=0.27.0
